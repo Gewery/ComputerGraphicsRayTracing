@@ -34,6 +34,7 @@ protected:
 class Vertex
 {
 public:
+	Vertex();
 	Vertex(float3 position) : position(position), normal(float3{ 0.0, 0.0, 0.0 }), tex(float3{ 0.0, 0.0, 0.0 }), color(float3{ 1.0, 1.0, 1.0 }) {};
 	Vertex(float3 position, float3 normal) : position(position), tex(float3{ 0.0, 0.0, 0.0 }), color(float3{ 1.0, 1.0, 1.0 }) { this->normal = normalize(normal); };
 	Vertex(float3 position, float3 normal, float3 tex) : position(position), tex(tex), color(float3{ 1.0, 1.0, 1.0 }) { this->normal = normalize(normal); };
@@ -54,7 +55,7 @@ class Triangle : public Intersectable
 {
 public:
 	Triangle(Vertex a, Vertex b, Vertex c);
-	//Triangle();
+	Triangle();
 	~Triangle();
 	IntersectableData Intersect(const Ray& ray) const;
 

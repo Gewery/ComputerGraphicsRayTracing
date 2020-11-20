@@ -84,10 +84,12 @@ Triangle::Triangle(Vertex a, Vertex b, Vertex c) :
 	ca = c.position - a.position;
 }
 
-//Triangle::Triangle() :
-//	a(float3{ 0, 0 ,0 }), b(float3{ 0, 0 ,0 }), c(float3{ 0, 0 ,0 })
-//{
-//}
+Triangle::Triangle()
+{
+	a = Vertex(float3{ 0, 0, 0 });
+	b = Vertex(float3{ 0, 0, 0 });
+	c = Vertex(float3{ 0, 0, 0 });
+}
 
 Triangle::~Triangle()
 {
@@ -116,4 +118,8 @@ IntersectableData Triangle::Intersect(const Ray& ray) const
 	float t = dot(ca, qvec) * inv_det;
 
 	return IntersectableData(t, float3{ 1 - u - v, u, v });
+}
+
+Vertex::Vertex()
+{
 }

@@ -157,9 +157,9 @@ Payload LightingAndShadows::Hit(const Ray& ray, const IntersectableData& data, c
     return payload;
 }
 
-//MaterialTriangle::MaterialTriangle()
-//{
-//}
+MaterialTriangle::MaterialTriangle()
+{
+}
 
 float3 MaterialTriangle::GetNormal(float3 barycentric) const
 {
