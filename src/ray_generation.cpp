@@ -101,7 +101,7 @@ void Camera::SetRenderTargetSize(short width, short height)
 
 Ray Camera::GetCameraRay(short x, short y, float3 jitter) const
 {
-	float u = (2.f * (y + 0.5f) / (1.f * width) - 1) * (1.f * width) / (1.f * height);
+	float u = (2.f * (x + 0.5f) / (1.f * width) - 1) * (1.f * width) / (1.f * height);
 	float v = 2.f * (y + 0.5f) / (1.f * height) - 1;
 
 	float3 ray_direction = this->direction + u * right - v * up + jitter;

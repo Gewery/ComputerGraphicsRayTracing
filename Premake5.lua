@@ -25,7 +25,6 @@ project "06. Ray generation"
    files {"src/ray_generation.h", "src/ray_generation.cpp" }
    files {"src/ray_generation_main.cpp"}
 
---[[
 project "07. Moller-Trumbore algorithm"
    kind "ConsoleApp"
    includedirs { "lib/stb" }
@@ -35,6 +34,7 @@ project "07. Moller-Trumbore algorithm"
    files {"src/mt_algorithm.h", "src/mt_algorithm.cpp"}
    files {"src/mt_algorithm_main.cpp"}
 
+--[[
 project "08. Lighting and shadows"
    kind "ConsoleApp"
    includedirs { "lib/stb" }

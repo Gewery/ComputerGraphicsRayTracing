@@ -54,7 +54,7 @@ class Triangle : public Intersectable
 {
 public:
 	Triangle(Vertex a, Vertex b, Vertex c);
-	Triangle();
+	//Triangle();
 	~Triangle();
 	IntersectableData Intersect(const Ray& ray) const;
 
