@@ -36,7 +36,7 @@ void TLAS::AddMesh(const Mesh mesh)
 
 bool cmp(const Mesh& a, const Mesh& b)
 {
-    return a.aabb_center() < b.aabb_center();
+    return a.aabb_min.y < b.aabb_min.y;
 }
 
 void AccelerationStructures::BuildBVH()
