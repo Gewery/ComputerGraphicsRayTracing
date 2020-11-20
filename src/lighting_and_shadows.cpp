@@ -63,8 +63,8 @@ int LightingAndShadows::LoadGeometry(std::filesystem::path filename)
 
                     vertices.push_back(Vertex(float3{ vx, vy, vz }, float3{ nx, ny, nz }));
                 }
-                tinyobj::real_t tx = attrib.texcoords[2 * idx.texcoord_index + 0];
-                tinyobj::real_t ty = attrib.texcoords[2 * idx.texcoord_index + 1];
+                //tinyobj::real_t tx = attrib.texcoords[2 * idx.texcoord_index + 0];
+                //tinyobj::real_t ty = attrib.texcoords[2 * idx.texcoord_index + 1];
                 // Optional: vertex colors
                 // tinyobj::real_t red = attrib.colors[3*idx.vertex_index+0];
                 // tinyobj::real_t green = attrib.colors[3*idx.vertex_index+1];
@@ -156,6 +156,10 @@ Payload LightingAndShadows::Hit(const Ray& ray, const IntersectableData& data, c
 
     return payload;
 }
+
+//MaterialTriangle::MaterialTriangle()
+//{
+//}
 
 float3 MaterialTriangle::GetNormal(float3 barycentric) const
 {

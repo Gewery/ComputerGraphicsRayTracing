@@ -46,7 +46,6 @@ project "08. Lighting and shadows"
    files {"src/lighting_and_shadows.h", "src/lighting_and_shadows.cpp"}
    files {"src/lighting_and_shadows_main.cpp"}
 
---[[
 
 project "09. Acceleration structures"
    kind "ConsoleApp"
@@ -60,6 +59,7 @@ project "09. Acceleration structures"
    files {"src/acceleration_structures.h", "src/acceleration_structures.cpp"}
    files {"src/acceleration_structures_main.cpp"}
 
+--[[
 project "10. Anti-aliasing"
    kind "ConsoleApp"
    includedirs { "lib/stb" }
