@@ -41,8 +41,7 @@ public:
 	void SetUp(float3 approx_up);
 	void SetRenderTargetSize(short width, short height);
 
-	Ray GetCameraRay(short x, short y) const;
-	Ray GetCameraRay(short x, short y, float3 jitter) const;
+	Ray GetCameraRay(short x, short y, float3 jitter = float3{ 0.f, 0.f, 0.f }) const;
 
 private:
 	float3 position;
